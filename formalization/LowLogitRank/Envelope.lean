@@ -14,9 +14,11 @@ This file formalizes the arithmetic of `sec:explicit-gls-procedure`,
   `eq:global-future-dimension`, `eq:explicit-gls-request-caps`),
 * the numerical polynomial envelope ("A numerical polynomial envelope").
 
-The probabilistic and algorithmic statements that these numbers feed (the spanner guarantee,
-the validation tail bound, the determinant witness bound, the TV telescope) are not formalized
-here; their numerical consequences are stated with the corresponding quantities as hypotheses.
+The probabilistic and algorithmic statements that these numbers feed are proved elsewhere: the
+spanner guarantee, the validation tail bound and the adapted Hoeffding bound in `Spanner/*`, the
+determinant witness bound and the TV telescope in `Witness/*` (applied to these parameters in
+`Envelope/Witness.lean`). Here their numerical consequences take the corresponding quantities
+as hypotheses.
 Logarithmic ceilings `⌈log₂ x⌉` are `Nat.ceil (Real.logb 2 x)`; all their arguments are `≥ 1`.
 -/
 

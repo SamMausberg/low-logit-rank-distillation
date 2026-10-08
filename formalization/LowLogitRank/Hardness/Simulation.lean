@@ -1,14 +1,13 @@
 import LowLogitRank.Hardness.Class
 
 /-!
-# Simulation, the event mass, and `TV(P_k, D_k)` (`sec:hardness`)
+# The simulator (`sec:hardness`)
 
 * `simulator`: the per-prefix simulator of the paragraph "Simulation and the sampler test", and
   `simulator_close`: for `H = F` it is within `η` of the teacher at every prefix. The transcript
   bound `qη` is `tv_transcript_simulator_le` in `Transfer.lean`, from `lem:coupling`.
-* `teacher_eventMass`: the mass identity `P_k(E_S) = (1-η)^{L+1} (1 - |S|/2^n)` in the proof of
-  `thm:reduction`, computed from `wordDist` with the padding summed out.
-* `tv_teacher_ideal`: `TV(P_k, D_k) = 1 - (1-η)^{L+1} ≤ (L+1)η`.
+
+The event mass and `TV(P_k, D_k)` are in `Event.lean`.
 -/
 
 namespace LowLogitRank.Hardness

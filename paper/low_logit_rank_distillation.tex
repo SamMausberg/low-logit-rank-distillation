@@ -118,12 +118,12 @@ The numerical-input convention in Section~\ref{sec:model} applies.
 The main algorithm uses the robust numerical learner of \citet{gls2}. For fixed accuracy and confidence, its total token bound is $\widetilde O_d(T^{6d+15})$, where the subscript allows constants and logarithmic powers depending on fixed $d$. Appendix~\ref{sec:probability-route} gives an independent proof using the probability-rank learner of \citet{liu-moitra}, and Appendix~\ref{sec:alphabet} extends fixed-rank learnability to finite alphabets. The dependence on $d$ is in the exponent; the theorem does not give a polynomial bound jointly in $T$ and $d$.
 
 \begin{theorem}[A specified probability floor; consequence of GLS]\label{thm:floor}
-Suppose $P\in\mathcal C_{T,d}$ and a supplied rational $\gamma\in(0,1/2]$ satisfies
+Suppose $T\ge32$, $P\in\mathcal C_{T,d}$, and a supplied rational $\gamma\in(0,1/2]$ satisfies
 \[
 \gamma\le P(1\mid h)\le1-\gamma
 \quad\text{for every }|h|<T.
 \]
-Then conditional next-bit samples suffice for learning to TV error $\varepsilon$ and failure probability $\delta$, with all required costs polynomial in $T,d,\gamma^{-1},\varepsilon^{-1},\log(1/\delta)$. With the spanner implementation in Appendix~\ref{sec:finite-bit-gls}, the bounds are
+Then conditional next-bit samples suffice for learning to TV error $\varepsilon$ and failure probability $\delta$, for rational $0<\varepsilon,\delta<1/2$, with all required costs polynomial in $T,d,\gamma^{-1},\varepsilon^{-1},\log(1/\delta)$. With the spanner implementation in Appendix~\ref{sec:finite-bit-gls}, the bounds are
 \[
 \widetilde O\!\left(\frac{T^{13}d^6}{\gamma\varepsilon^4}\right)
 \quad\text{next-bit replies, and}\quad
@@ -137,7 +137,7 @@ The same numerical-input convention applies.
 Here $\widetilde O$ suppresses powers of logarithms in the displayed parameters. This is an audited consequence of \citet[Theorem~5.11 and Remark~5.8]{gls2}, rather than a new bounded-probability learning principle. The quantitative improvement uses a proved compression bound for the spanner routine and counts the total number of future columns added across cuts. For each fixed $k$ and fixed $c>0$, it applies to the floor $\gamma=cT^{-k}$. A constant floor is included. Allowing the exponent of an unspecified polynomial to vary without a common bound would be a different uniformity requirement.
 
 \begin{theorem}[Conditional obstruction when rank grows]\label{thm:hardness}
-If strong Boolean pseudorandom functions with fixed-key logarithmic-depth circuits exist, no learner has costs polynomial jointly in $T,d$ and succeeds with probability $0.99$ at TV error $0.01$ for every $T\ge32$, $1\le d\le T^2$, and $P\in\mathcal C_{T,d}$. Naor--Reingold's finite-field decisional Diffie--Hellman assumption is sufficient for this conclusion.
+If strong Boolean pseudorandom functions with fixed-key logarithmic-depth circuits exist, no uniform learner has costs polynomial jointly in $T,d$ and succeeds with probability $0.99$ at TV error $0.01$ for every $T\ge32$, $1\le d\le T^2$, and $P\in\mathcal C_{T,d}$. Naor--Reingold's finite-field decisional Diffie--Hellman assumption is sufficient for this conclusion.
 \end{theorem}
 
 The reduction underlying Theorem~\ref{thm:hardness} is unconditional. A putative learner would produce distinguishing advantage at least $0.4801-o(1)$. The security assumption is stated in Section~\ref{sec:hardness}. It concerns computation, not the amount of sample information: Appendix~\ref{sec:sample-upper} gives polynomial sample sufficiency with an exponential search, and implements that search in $\mathsf{FP}^{\mathsf{NP}}$, deterministic polynomial time with an NP decision oracle.
@@ -192,7 +192,7 @@ h\in\{0,1\}^t,\ f\in\{0,1\}^{T-t}}.
 \]
 This is a different invariant. Appendix~\ref{sec:probability-route} uses a comparison distribution with low probability rank. This does not impose an additional assumption on $P$.
 
-The learner may submit any prefix $h$ and receive one independent bit from $P(\cdot\mid h)$. The charge is $|h|+1$ tokens, including the submitted prefix and the reply. Successive replies simulate a complete conditional suffix. Starting from a prefix of length $t$, the charge is exactly
+The learner may submit any prefix $h$ with $|h|<T$ and receive one independent bit from $P(\cdot\mid h)$. The charge is $|h|+1$ tokens, including the submitted prefix and the reply. Successive replies simulate a complete conditional suffix. Starting from a prefix of length $t$, the charge is exactly
 \begin{equation}\label{eq:suffix-charge}
 \sum_{j=t}^{T-1}(j+1)
 =\frac{T(T+1)-t(t+1)}2.
@@ -387,7 +387,7 @@ T\zeta\le\varepsilon/8,
 \end{equation}
 as we verify in Appendix~\ref{sec:smooth-parameter-check}.
 
-Define independent conceptual estimation groups from $P^\tau(\cdot\mid h)$ for every prefix $h$, independently of all complete samples and learner coins. The estimator in Lemma~\ref{lem:floor-estimator}, with floor $\tau/2$, produces a cached table $A(h)$ on the fixed dyadic grid prescribed by Lemma~\ref{lem:explicit-gls-token-envelope}. If an entry is accurate for $\ell_{P^\tau}(h)$ within $\xi/2$, it is accurate for $\ell_{P^\circ}(h)$ within $\xi$, by~\eqref{eq:smooth-budget}. Replace each inaccurate entry by a canonical $\xi$-accurate approximation to $\ell_{P^\circ}(h)$ on that same grid, obtaining a conceptual table $A_{\rm good}$. This replacement is a proof device.
+Define independent conceptual estimation groups from $P^\tau(\cdot\mid h)$ for every prefix $h$, independently of all complete samples and learner coins. The estimator in Lemma~\ref{lem:floor-estimator}, with floor $\tau/2$, produces a cached table $A(h)$ on the fixed dyadic grid prescribed by Lemma~\ref{lem:explicit-gls-token-envelope}. If an entry is accurate for $\ell_{P^\tau}(h)$ within $\xi/2$, it is accurate for $\ell_{P^\circ}(h)$ within $\xi$, by Lemma~\ref{lem:softclip-poly} and~\eqref{eq:smooth-budget}. Replace each inaccurate entry by a canonical $\xi$-accurate approximation to $\ell_{P^\circ}(h)$ on that same grid, obtaining a conceptual table $A_{\rm good}$. This replacement is a proof device.
 
 Consider the ideal run with numerical oracle $A_{\rm good}$ and independent complete samples from $P^\circ$. Conditional on any fixed table, Lemma~\ref{lem:explicit-gls-token-envelope} applies. With probability at least $1-\delta/4$, including the reserved numerical and generation tolerances, its output $Q$ satisfies $\TV(P^\circ,Q)\le\varepsilon/2$.
 
@@ -483,7 +483,7 @@ For any cut $t$ and $f=f_1\cdots f_m$ of legal length,
 Every column is a functional of the same $n+7$ coordinates. This factors the entire cut matrix, including all future lengths, through dimension $n+7$.
 \end{proof}
 
-The rank also grows with $n$: at cut $n$, the $n$ columns immediately before the first sweep's copy positions are $B(2X_i-1)$, $1\le i\le n$. These are linearly independent functions on $\{0,1\}^n$, so that matrix has rank at least $n$. The construction cannot contradict fixed-constant-rank learnability.
+The rank also grows with $n$: at cut $n$, the columns indexed by the futures $0^{i-1}$, $1\le i\le n$, carry the first $n$ copy logits $B(2X_i-1)$. These are linearly independent functions on $\{0,1\}^n$, so that matrix has rank at least $n$. The construction cannot contradict fixed-constant-rank learnability.
 
 Appendix~\ref{sec:mixed-length} extends the negative theorem to the stronger mixed-history-length convention, with the larger rank bound $T(n+7)\le T^2$.
 
@@ -492,7 +492,7 @@ Appendix~\ref{sec:mixed-length} extends the negative theorem to the stronger mix
 Given membership access to a Boolean function $H$, answer input and padding queries with fair bits, copy queries with the prescribed $X_{i_j}$, consistent-label queries with $H(X)$, and inconsistent-label queries with one. For $H=F_k$, every response law differs from the teacher's law by TV at most $\eta$. First-disagreement coupling therefore bounds the discrepancy of any adaptive $q$-query training transcript by $q\eta$. Prefix parsing is polynomial and each simulated query uses at most one membership query.
 
 \begin{theorem}[Explicit reduction]\label{thm:reduction}
-Suppose a learner has polynomial costs jointly in $T,d$ and returns a standalone $Q$ with TV error at most $\varepsilon$, with probability at least $1-\delta$, for every $P\in\mathcal C_{T,d}$. Let $q$ bound its queries at~\eqref{eq:hard-parameters}. There is a uniform polynomial-time membership-query distinguisher with advantage at least
+Suppose a uniform learner has polynomial costs jointly in $T,d$ and returns a standalone $Q$ with TV error at most $\varepsilon$, with probability at least $1-\delta$, for every $P\in\mathcal C_{T,d}$. Let $q$ bound its queries at~\eqref{eq:hard-parameters}. There is a uniform polynomial-time membership-query distinguisher with advantage at least
 \begin{equation}\label{eq:hard-advantage}
 (1-\delta)\left[(1-\eta)^{L+1}
 \left(1-\frac q{2^n}\right)-\varepsilon\right]
@@ -757,7 +757,7 @@ The same series at $z=1/3$ computes $\log2$. Its geometric tail requires only po
 
 \begin{proof}[Completion of the proof of Theorem~\ref{thm:floor}]
 We continue the proof in Section~\ref{sec:floor} from the raw reply bound~\eqref{eq:floor-replies}.
-We justify adaptivity without conditioning incorrectly on the estimation event. Conceptually assign independent estimation samples to every possible prefix, independently of the learner's complete samples and coins. Let $L(h)$ be the resulting cached estimate. Define a comparison table $L_{\rm good}$ by replacing every inaccurate entry with a canonical accurate approximation on that same dyadic grid. These replacements are only proof objects. Conditional on any comparison table, the robust logit theorem applies, because the learner's complete samples and coins remain independent of it. Couple the actual and comparison runs. Before their first disagreement, a new prefix has an untouched independent sample group, whose failure probability is at most $\delta/(2R_\ell)$. Repeated prefixes use their cached answer. A union bound bounds the chance of any disagreement by $\delta/2$.
+We justify adaptivity without conditioning incorrectly on the estimation event. Conceptually assign independent estimation samples to every possible prefix, independently of the learner's complete samples and coins. Let $A(h)$ be the resulting cached estimate. Define a comparison table $A_{\rm good}$ by replacing every inaccurate entry with a canonical accurate approximation on that same dyadic grid. These replacements are only proof objects. Conditional on any comparison table, the robust logit theorem applies, because the learner's complete samples and coins remain independent of it. Couple the actual and comparison runs. Before their first disagreement, a new prefix has an untouched independent sample group, whose failure probability is at most $\delta/(2R_\ell)$. Repeated prefixes use their cached answer. A union bound bounds the chance of any disagreement by $\delta/2$.
 
 Each logit-estimation reply costs at most $T$ tokens including its prefix. Each complete sample costs $T(T+1)/2$. Multiplying~\eqref{eq:floor-replies} accordingly gives the claimed token bound. The published learner's linear programs and spanner calculations have polynomially many bounded-bit rational coefficients under these dyadic oracle answers. Appendix~\ref{sec:finite-bit-gls} gives the finite-bit implementation and the dyadic, total standalone generator. Reserving the remaining constant fraction of the TV budget for generation rounding completes the proof.
 \end{proof}
@@ -832,7 +832,7 @@ Also
 Consequently $\log_2D\le3dJ$ and $\log_2V\le(3d+1)J$. For the first inequality in~\eqref{eq:smooth-budget}, use $\xi^{-1}\le V^{C_q}$ and
 $N>C_q\log_2V+1$. For the second and third, their additional logarithms are bounded by $J+2$, still smaller than the remaining margin in $N$.
 
-All raw conditional bits used to simulate $P^\tau$ cost at most one teacher reply or one locally generated fair token. The numerical estimator has floor $\tau/2\ge\varepsilon/(32T)$. Substituting the improved request bound~\eqref{eq:improved-gls-queries} and the robust tolerance
+All raw conditional bits used to simulate $P^\tau$ cost at most one teacher reply or one locally generated fair token, plus the $b_\tau=O(\log(T/\varepsilon))$ branch coins. The numerical estimator has floor $\tau/2\ge\varepsilon/(32T)$. Substituting the improved request bound~\eqref{eq:improved-gls-queries} and the robust tolerance
 \[
 R_\ell+R_s=\widetilde O(T^7D^3/\varepsilon^2),
 \qquad
@@ -1218,10 +1218,10 @@ $g/(1024K\sqrt{dJ_b})$. Its choice uses squared rational comparisons, and
 Use coefficient bound $\beta=2$, discrepancy threshold $g$, the spanner of Lemma~\ref{lem:compression-spanner} with failure $\delta_s$ at each call, and the corrected validation indices, initialization, acceptance rule, and completed emission cache described above. Use a deterministic rational solver with the same tie-breaking in validation and generation. Compute and round each emitted conditional probability to total additive error at most $\varepsilon/(8T)$.
 
 \paragraph{Explicit witness bound.}
-At a fixed cut, let $L_j$ denote the discrepancy row at its $j$th witness addition and let the witness columns be indexed by $i$. The reconstruction equalities give $L_j(i)=0$ for $i<j$, and the discrepancy test gives $|L_j(j)|>g$. Use one fixed bounded factorization of the complete target matrix at this cut, supplied by Lemma~\ref{lem:bounded-factors}. Replacing each numerical entry in a discrepancy by its true logit changes each summand by at most $\xi$. Each discrepancy is a difference of two linear combinations of actual history rows. Thus there are vectors $v_j,\phi_i$, using the same future factor for every epoch, satisfying
+At a fixed cut, let $L_j$ denote the discrepancy row at its $j$th witness addition and let the witness columns be indexed by $i$. The reconstruction equalities give $L_j(i)=0$ for $i<j$, and the discrepancy test gives $|L_j(j)|>g$. Use one fixed bounded factorization of the complete target matrix at this cut, supplied by Lemma~\ref{lem:bounded-factors}. Replacing each numerical entry in a discrepancy by its true logit changes that entry by at most $\xi$, hence each summand by at most $2\xi$. Each discrepancy is a difference of two linear combinations of actual history rows. Thus there are vectors $v_j,\phi_i$, using the same future factor for every epoch, satisfying
 \[
 \|v_j\|_2\le B:=24K\alpha,\qquad
-\|\phi_i\|_2\le R:=\alpha,\qquad
+\|\phi_i\|_2\le R_\phi:=\alpha,\qquad
 |L_j(i)-\langle v_j,\phi_i\rangle|\le24K\xi
 \quad(i\le j).
 \]
@@ -1244,19 +1244,19 @@ and Cauchy--Schwarz in the $M_{j-1}$ inner product implies
 >\frac{(g-e_0)^2}{je_0^2}
 =\frac{(16\sqrt{dJ_b}-1)^2}{j}.
 \]
-If $M=64dJ_b$ witnesses existed, every $j\le M$ would have leverage greater than one. The matrix determinant lemma would then give
+If $m_\star=64dJ_b$ witnesses existed, every $j\le m_\star$ would have leverage greater than one. The matrix determinant lemma would then give
 \[
-\log_2\frac{\det M_M}{\det M_0}>M=64dJ_b.
+\log_2\frac{\det M_{m_\star}}{\det M_0}>m_\star=64dJ_b.
 \]
 On the other hand, the trace--determinant inequality gives
 \[
-\log_2\frac{\det M_M}{\det M_0}
-\le d\log_2\left(1+\frac{M}{d}a_0\right),
-\qquad a_0=(BR/e_0)^2.
+\log_2\frac{\det M_{m_\star}}{\det M_0}
+\le d\log_2\left(1+\frac{m_\star}{d}a_0\right),
+\qquad a_0=(BR_\phi/e_0)^2.
 \]
 Direct substitution yields
 \[
-\frac{BR}{e_0}
+\frac{BR_\phi}{e_0}
 =3\cdot2^{21}
 \frac{T^3d^{3/2}J_b^{3/2}\alpha^2}{\varepsilon}.
 \]
@@ -1383,7 +1383,7 @@ This proves the explicit token envelope.
 
 We use the following index and constant-factor corrections to the validation argument. The validation loop in GLS Algorithm~1 runs over $1\le t\le T-1$; within its discrepancy test, the valid indices are $1\le s\le t$ and $s\le r\le t+1$. An epoch is accepted, its completed emission cache is stored, and its representation is returned only after every cut in that validation loop has passed both feasibility and discrepancy checks. Thus the cache-and-return block is outside the validation loop, as required by the proof. The reconstruction program defines coefficients only through $s=t$; no coefficient at $s=t+1$ is needed for the next-token telescoping argument. Define the initial extended row by $\hat L_1=L_{1,1}$, using $c_1=e_1$, so the $s=1$ residual is zero and no time-zero coefficient is referenced.
 
-For the proof of GLS Lemma~5.7, use the following probability bound. Conditional on an epoch's fixed spanners, let $Z\in[0,1]$ be the maximum absolute residual over all tested $(s,r,a)$ at a fresh prefix of the current outer cut, truncated at one and set to zero on infeasible prefixes, and use the threshold $g<1/2$ from~\eqref{eq:explicit-gls-parameters}. The elementary bound
+For the proof of GLS Lemma~5.7, use the following probability bound. Conditional on an epoch's fixed spanners, let $Z\in[0,1]$ be the maximum absolute residual over all tested $(s,r,a)$ at a fresh prefix of the current outer cut, truncated at one and set to zero on infeasible prefixes, and use the threshold $g<1/2$ from~\eqref{eq:explicit-gls-parameters}, so truncation at one does not change the event $Z>g$. The elementary bound
 \[
 \mathbb E Z\le g+\Pr\{Z>g\}
 \]
@@ -1595,9 +1595,9 @@ For a polynomial $M_0$ bounding the stored products $ks$, the preceding rational
 \]
 This is polynomial.
 
-There are at most $S$ coefficients. The bound $|\alpha_i|\le3S$ and stored probabilities at most one imply that each coordinate of the unnormalized next-token vector has magnitude at most $3S^2$. The rounding step of Algorithm~6 clips each coordinate below at $2c^{1/10}\le2$, so its normalizing denominator is at most $O(3S^2+2)$. Hence every computed branch probability obeys the syntactic bound
+There are at most $S$ coefficients. The bound $|\alpha_i|\le3S$ and stored probabilities at most one imply that each coordinate of the unnormalized next-token vector has magnitude at most $3S^2$. The rounding step of Algorithm~6 clips each coordinate below at $2c^{1/10}\le2$, so its normalizing denominator is at most $O\cdot(3S^2+2)$. Hence every computed branch probability obeys the syntactic bound
 \[
-p_o\ge\frac{2c^{1/10}}{O(3S^2+2)}.
+p_o\ge\frac{2c^{1/10}}{O\cdot(3S^2+2)}.
 \]
 This holds before using the statistical success event. The updated coefficients $\nu_i=\alpha_i P_{i,o}/p_o$ and target coordinates $z_j$ have magnitude at most $\poly(O,S)c^{-1/10}$. The logarithms of their magnitudes are polynomial. Here $c^{1/10}=\eta_0^{OTS}$ is rational for dyadic $\eta_0$.
 
@@ -1722,7 +1722,7 @@ $\rho=1+1/(4dT)$ and extend $x$ to a product of $d$ Bernstein ellipses of parame
 and $|F_{t,y}(x)|\le1/\cos(1/4)<2$ there.
 
 The repeated Laurent argument from Lemma~\ref{lem:poly-sigmoid} bounds its tensor Chebyshev coefficients by
-$2\prod_{i=1}^d v_{\alpha_i}$, where $v_0=1$ and $v_j=2\rho^{-j}$ for $j\ge1$. Truncating after degree $K$ in each coordinate has uniform error at most
+$2\prod_{i=1}^d v_{\alpha_i}$, where $v_0=1$ and $v_j=2\rho^{-j}$ for $j\ge1$. In detail, $G(w)=F_{t,y}\bigl((w_1+w_1^{-1})/2,\ldots,(w_d+w_d^{-1})/2\bigr)$ is holomorphic on the closed product of the annuli $\rho^{-1}\le|w_i|\le\rho$. Cauchy's estimate on the tori $|w_i|=\rho^{\pm1}$ bounds its Laurent coefficients by $2\rho^{-\sum_i|\alpha_i|}$, and the tensor Chebyshev coefficient of index $\alpha$ is $2^{|\{i:\alpha_i\ne0\}|}$ times the corresponding Laurent coefficient. Truncating after degree $K$ in each coordinate has uniform error at most
 \[
 \begin{split}
 2d\left(\sum_{j>K}v_j\right)
@@ -1775,7 +1775,7 @@ Also $R\le(1001H^8)^d$. For the fully inlined query cap $q\le(2TAR/a)^C$,
 \le8H^3+10H^2+3H+1
 \le22H^3<N\log2.
 \]
-Hence $(q+1)T\eta\le a$. Uniform next-token TV error $\eta$ gives suffix-query error at most $T\eta$, and the adaptive transfer proof of Theorem~\ref{thm:fixed} applies unchanged. The target TV error and failure probability are at most $2a$.
+Hence $(q+1)T\eta\le a$. Uniform next-token TV error $\eta$ gives suffix-query error at most $T\eta$, and the adaptive transfer in the second proof of Theorem~\ref{thm:fixed} (Appendix~\ref{sec:probability-route}) applies unchanged. The target TV error and failure probability are at most $2a$.
 
 Charge every full-suffix query by~\eqref{eq:suffix-charge}. A token's binary encoding uses $\lceil\log_2A\rceil$ bits, absorbed in the polynomial dependence on $A$. The rational implementation, bounded-bit sampling, and separate training and generation caps in Appendix~\ref{sec:finite-bit-lm} apply with this finite alphabet. The learner never computes the states or approximation polynomials used to establish the surrogate's existence.
 \end{proof}
@@ -1898,7 +1898,7 @@ for the Hellinger affinity. Cauchy--Schwarz gives
 \]
 Thus any bad candidate with $\TV(P,Q)>\varepsilon$ satisfies
 $\mathcal A(P,Q)\le\sqrt{1-\varepsilon^2}\le e^{-\varepsilon^2/2}$.
-If such a candidate beats $Q_*$ in empirical likelihood, the pointwise lower bound in~\eqref{eq:bestKL} implies
+If such a candidate matches or beats $Q_*$ in empirical likelihood, the pointwise lower bound in~\eqref{eq:bestKL} implies
 \[
 \prod_{i=1}^m\frac{Q(Z_i)}{P(Z_i)}\ge e^{-ma}.
 \]
@@ -1924,7 +1924,7 @@ The total teacher-token charge is $mT(T+1)/2$, and each subsequent student sampl
 The finite search has a polynomial-size witness: a candidate's grid parameters require
 $O(Td^2[k+\log(T+1)])$ bits. Given such a witness and the sample, its likelihood numerator is computable in polynomial time by the exact integer-product procedure above. For any integer threshold $v$, the question ``does some valid grid candidate have likelihood numerator at least $v$?'' is therefore in NP. Binary search over the interval $[0,2^{bmT}]$ finds the optimum with at most $bmT+1$ NP queries. Fixing candidate bits successively, using the same feasibility predicate with a prescribed prefix, recovers an optimizing candidate with polynomially many further queries.
 
-For the original regime $d\le T^2$ and fixed accuracy and confidence, the explicit length-$T$ samples make these witness and verification bounds polynomial in the ordinary binary input length. More generally, one may encode the numerical work bounds in unary. Every grid encoding satisfying its entry bounds defines a valid distribution through clipping and dyadic sampling, so there is no universal validity test over all prefixes. The NP verifier uses only the finite sample and never queries the teacher.
+For the original regime $d\le T^2$ and fixed accuracy and confidence, the explicit length-$T$ samples make these witness and verification bounds polynomial in the ordinary binary input length. More generally, one may encode the numerical work bounds in unary. Every grid encoding satisfying its entry bounds defines a valid distribution through clipping and dyadic sampling, so no validity test over all prefixes is needed. The NP verifier uses only the finite sample and never queries the teacher.
 
 This proves an unconditional polynomial-sample, polynomial-time-with-an-NP-oracle upper bound. If $\mathsf P=\mathsf{NP}$, the oracle can be replaced by a polynomial-time decision algorithm, and all resource guarantees of the original joint-polynomial learning question hold. Consequently, an unconditional proof that no such learner exists would, in particular, prove $\mathsf P\ne\mathsf{NP}$. The cryptographic reduction is consequently a conditional computational obstruction.
 
@@ -1933,7 +1933,7 @@ This proves an unconditional polynomial-sample, polynomial-time-with-an-NP-oracl
 \section{Hardness for every fixed TV error below one}\label{sec:weak-error}
 
 \begin{corollary}[Arbitrarily weak constant TV approximation]\label{cor:allTV}
-Assuming strong Boolean PRFs in $\NC$, no learner with the requested polynomial resource bounds can guarantee any fixed TV error $\varepsilon<1$ with any fixed positive success probability $1-\delta>0$ over the whole class.
+Assuming strong Boolean PRFs in $\NC$, no uniform learner with the requested polynomial resource bounds can guarantee any fixed TV error $\varepsilon<1$ with any fixed positive success probability $1-\delta>0$ over the whole class.
 \end{corollary}
 \begin{proof}
 Set $a_0=(1-\delta)(1-\varepsilon)>0$, choose the constant
@@ -1946,9 +1946,9 @@ Generate $X$ uniformly, then $r$ successive blocks $(A^{(j)},Y_j)$, followed by 
 where, for $j<r-1$, $v_0^{(j+1)}$ is the initial vector of the next block's program.
 This is a linear update using the retained constant coordinate and makes earlier malformed blocks irrelevant to the current label. Therefore the rank at every fixed-length cut is at most $m+7$, independently of $r$, even for futures crossing several resets. Under the stronger mixed-history-length convention, use the bound $T(m+7)\le T^2$ instead. Choose
 \[
-B=n\ln2,\qquad \eta=(1+2^{2n})^{-1},\qquad T=2nr(L+1).
+B=n\log2,\qquad \eta=(1+2^{2n})^{-1},\qquad T=2nr(L+1).
 \]
-Then $|\ell|\le n\ln2\,(2L+1)<T$, there is enough padding, and the exact rationality and full-support arguments are unchanged.
+Then $|\ell|\le n\log2\,(2L+1)<T$, there is enough padding, and the exact rationality and full-support arguments are unchanged.
 
 Simulate a consistent label query in block $j$ by querying $H(X,j)$; simulate an inconsistent one by returning one. Record the payload $X$ whenever \emph{any} index is queried. This records at most $q$ payloads. Run the student once, reject inconsistent copy blocks and recorded payloads, and check all $r$ predicted labels at a fresh payload. In the random-function case the $r$ queried values are jointly independent fair bits, so acceptance is at most $2^{-r}$. In the real case all copies and labels are correct with probability $(1-\eta)^{r(L+1)}$. The same coupling and TV argument gives advantage at least
 \[
@@ -1978,14 +1978,14 @@ Write $U$ for the procedure's initial complete sample. Its initialization includ
 \[
 \widehat\ell=(2U_1-1)a
 \]
-estimates $\ell_P(\varnothing)$ within $\xi_{\rm sim}$ whenever that requested entry is accurate. The faithfulness contract gives this event probability at least $0.99$ for both teachers in Proposition~\ref{prop:scalar}.
+estimates $\ell_P(\varnothing)$ within $\xi_{\rm sim}$ whenever that requested entry is accurate. The faithfulness contract gives this event probability at least $0.99$ for both teachers in Proposition~\ref{prop:scalar}. The contract is uniform over $\mathcal C_{T,1}$, and the proof of that proposition uses only these two teachers.
 
 Run the full sampling implementation up to this entry and return $\widehat\ell$; if it aborts first, return a fixed default estimate. This is a capped scalar estimator with success at least $0.99$, so the proposition lower-bounds its expected empty-prefix replies on $P_0$. Its replies form a subset of the full training replies. The initial sample and any reused or cached observations are already part of this estimator's transcript; no independence between $U_1$ and $a$ is assumed. This proves the claim.
 \end{proof}
 
 This is a comparison on one explicitly specified common teacher. The lower bound concerns the numerical accuracy required by the faithful simulation. A modified learning procedure that need not produce that root estimate is a different comparator.
 
-Fix $d,\varepsilon,\delta$ and the explicit token exponent $C_q=52$ from~\eqref{eq:gls-polynomial-envelope}. Put
+Fix $d\ge1$, rational $0<\varepsilon,\delta<1/2$, and the explicit token exponent $C_q=52$ from~\eqref{eq:gls-polynomial-envelope}. Put
 \[
 \begin{split}
 E&=\lceil\log_2(1/\varepsilon)\rceil,\qquad
@@ -2075,7 +2075,7 @@ Later logit matrices vanish. The largest per-query simulator discrepancy is $1/6
 1-\left(1-\frac1{65537}\right)^8
 \approx0.0001220619310.
 \]
-The selected copy-probability matrix has rank four. These calculations check signs, the linear counter update, the saturation rule, and the event-mass identity in one small instance. They provide no evidence for a cryptographic assumption and do not replace the general rank or coupling proofs.
+The $4\times4$ matrix of probabilities of the first two copy bits given the input has rank four. These calculations check signs, the linear counter update, the label rule after a mismatch, and the event-mass identity in one small instance. They provide no evidence for a cryptographic assumption and do not replace the general rank or coupling proofs.
 
 \subsection{Lean formalization}
 
@@ -2085,9 +2085,9 @@ The directory \texttt{formalization} of the repository
 \end{center}
 contains a Lean~4 formalization built on Mathlib. It compiles with warnings treated as errors. A script checks that every declaration in it depends only on the axioms \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The Lean statements cite this paper by \TeX{} label, and the file \texttt{README.md} in that directory lists the correspondence.
 
-The formalization defines the class $\mathcal C_{T,d}$ through next-bit probabilities and proves Lemma~\ref{lem:coupling} for adaptive transcripts. It proves the Chebyshev approximation on a Bernstein ellipse behind Lemmas~\ref{lem:softclip-poly} and~\ref{lem:poly-sigmoid}, both rank lifts (Lemmas~\ref{lem:logit-lift} and~\ref{lem:lift}), and the existence of the two comparison distributions with all their stated bounds. The second proof in Appendix~\ref{sec:probability-route} is formalized relative to the guarantee of Theorem~\ref{thm:lm}. The parameter inequalities in the proof of Theorem~\ref{thm:fixed} and in Appendix~\ref{sec:probability-route} are checked, as are the numerical claims and the witness bound of Lemma~\ref{lem:explicit-gls-token-envelope}, and the crossover of Corollary~\ref{cor:tenfold2048}. Lemmas~\ref{lem:bounded-factors} and~\ref{lem:approx-projection} are formalized, and so is Lemma~\ref{lem:compression-spanner} for finitely supported row laws, with an existence argument in place of the basis-exchange procedure. For the negative results the formalization covers the membership of the hard teacher in $\mathcal C_{T,n+7}$, its simulator error, the event mass, and the random-function case for adaptive query trees in the proof of Theorem~\ref{thm:reduction}, and Proposition~\ref{prop:cauchy}. Proposition~\ref{prop:scalar} is proved for capped algorithms with finitely many coin outcomes. The statistical part of Theorem~\ref{thm:cover} is also checked.
+The formalization defines the class $\mathcal C_{T,d}$ through next-bit probabilities and proves Lemma~\ref{lem:coupling} for adaptive transcripts. It proves the Chebyshev approximation on a Bernstein ellipse behind Lemmas~\ref{lem:softclip-poly} and~\ref{lem:poly-sigmoid}, both rank lifts (Lemmas~\ref{lem:logit-lift} and~\ref{lem:lift}), and the existence of the two comparison distributions with all their stated bounds. The second proof in Appendix~\ref{sec:probability-route} is formalized relative to the guarantee of Theorem~\ref{thm:lm}. The parameter inequalities in the proof of Theorem~\ref{thm:fixed} and in Appendix~\ref{sec:probability-route} are checked, as are the numerical claims and the witness bound of Lemma~\ref{lem:explicit-gls-token-envelope}, and the crossover of Corollary~\ref{cor:tenfold2048}. So are Lemma~\ref{lem:gls-feasibility} and the validation, Hoeffding and telescoping steps of Appendix~\ref{sec:gls-validation-arithmetic}. Lemmas~\ref{lem:bounded-factors} and~\ref{lem:approx-projection} are formalized, and so is Lemma~\ref{lem:compression-spanner} for finitely supported row laws, with an existence argument in place of the basis-exchange procedure. For the negative results the formalization covers the membership of the hard teacher in $\mathcal C_{T,n+7}$, its simulator error and the resulting transcript bound, the event mass, the random-function case for adaptive query trees, and the advantage arithmetic in the proof of Theorem~\ref{thm:reduction}, and Proposition~\ref{prop:cauchy}. Proposition~\ref{prop:scalar} is proved for capped algorithms with finitely many coin outcomes. The statistical part of Theorem~\ref{thm:cover} is also checked.
 
-Some ingredients remain ordinary proofs or cited results. The learning theorems of \citet{gls2} and \citet{liu-moitra} and the faithfulness contract of Appendix~\ref{sec:crossover} enter as explicit hypotheses. Barrington's theorem and the public-sweep compilation enter through~\eqref{eq:hard-consistency}. The pseudorandom-function assumption, the multiplicative Chernoff and Hoeffding bounds for independent samples, the coupling of cached estimates in the proof of Theorem~\ref{thm:fixed}, the multivariate approximation of Appendix~\ref{sec:alphabet}, the mixed-history-length extension of Appendix~\ref{sec:mixed-length}, and every bit-complexity or running-time claim are not formalized.
+Some ingredients remain ordinary proofs or cited results. The learning theorem of \citet{liu-moitra} and the faithfulness contract of Appendix~\ref{sec:crossover} enter as explicit hypotheses. Barrington's theorem and the public-sweep compilation enter through~\eqref{eq:hard-consistency}. The learning guarantee of \citet[Theorem~5.11]{gls2}, the pseudorandom-function assumption, and the multiplicative Chernoff and Hoeffding bounds for independent samples are not formalized. The same holds for the coupling of cached estimates in the proofs of Theorems~\ref{thm:floor} and~\ref{thm:fixed}, the multivariate approximation of Appendix~\ref{sec:alphabet}, the mixed-history-length extension of Appendix~\ref{sec:mixed-length}, the multi-block simulator and event mass of Corollary~\ref{cor:allTV}, and every bit-complexity or running-time claim.
 
 
 

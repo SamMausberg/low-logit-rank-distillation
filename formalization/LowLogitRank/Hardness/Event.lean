@@ -3,6 +3,10 @@ import LowLogitRank.Hardness.Simulation
 /-!
 # The fresh-label event of `thm:reduction` and `TV(P_k, D_k)`
 
+* `teacher_eventMass`: the mass identity `P_k(E_S) = (1-η)^{L+1} (1 - |S|/2^n)` in the proof of
+  `thm:reduction`.
+* `tv_teacher_ideal`: `TV(P_k, D_k) = 1 - (1-η)^{L+1} ≤ (L+1)η`.
+
 All masses are computed from `wordDist (teacher …) T`, a function on `{0,1}^T`; the padding
 block is summed out.
 -/
