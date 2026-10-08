@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite this manuscript and identify the repository commit used. No arXiv identifier or DOI has been assigned."
+title: "Learning Low-Logit-Rank Distributions from Conditional Samples"
+type: software
+authors:
+  - family-names: Mausberg
+    given-names: Samuel
+date-released: "2026-10-08"
+repository-code: "https://github.com/SamMausberg/low-logit-rank-distillation"
+url: "https://github.com/SamMausberg/low-logit-rank-distillation"
+license: MIT
+keywords:
+  - distribution learning
+  - language-model distillation
+  - conditional sampling
+  - logit rank
+  - pseudorandom functions
+  - Lean 4
+preferred-citation:
+  type: unpublished
+  title: "Learning Low-Logit-Rank Distributions from Conditional Samples"
+  authors:
+    - family-names: Mausberg
+      given-names: Samuel
+  year: 2026
+  license: CC-BY-4.0
+  notes: "Unpublished manuscript. Identify the repository commit used."
+  url: "https://github.com/SamMausberg/low-logit-rank-distillation"

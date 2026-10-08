@@ -1,0 +1,17 @@
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+include = ["formalization/*.py", "checks/*.py"]
+extend-exclude = [
+  "formalization/.lake",
+  # Distributed with the manuscript; kept byte-identical to the released supplement.
+  "checks/audit_low_logit_rank.py",
+]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

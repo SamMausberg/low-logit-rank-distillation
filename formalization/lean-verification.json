@@ -1,0 +1,1501 @@
+{
+  "status": "passed",
+  "forbidden_tokens": [],
+  "build_returncode": 0,
+  "declarations_checked": 2755,
+  "declarations_with_nonstandard_axioms": 0,
+  "theorems_citing_paper_labels": 466,
+  "labelled_theorems": {
+    "LowLogitRank.AlphabetAlgebra.abs_sumCorrect_sub_le": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.alR_le": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.al_degree_suffices": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.al_log_degree": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.al_query_budget": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.alphabet_normalization": [
+      "sec:alphabet",
+      "thm:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.ellipse_imag_bound": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.hasSum_tail": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.inv_cos_quarter_lt_two": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.log_rhoOf_ge": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.posCorrect_pos": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.posCorrect_sub_eq": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.sum_posCorrect": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.sum_sumCorrect": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.truncation_const_le": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.truncation_eq": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.truncation_le_of_degree": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.AlphabetAlgebra.tv_posCorrect_le": [
+      "sec:alphabet"
+    ],
+    "LowLogitRank.Approximation.abs_affineCorrection_sub_le": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Approximation.abs_affineCorrection_sub_le_three": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Approximation.abs_im_cpsi_lt": [
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Approximation.abs_re_cpsi_le": [
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Approximation.affineCorrection_mem": [
+      "eq:affine-correction"
+    ],
+    "LowLogitRank.Approximation.affineCorrection_range_pos": [
+      "eq:affine-correction"
+    ],
+    "LowLogitRank.Approximation.differentiableAt_csig": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Approximation.lin_ratio_bounds": [
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Approximation.normSq_one_add_exp": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Approximation.norm_cpsi_le": [
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Approximation.norm_csig_le": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Approximation.poly_sigmoid_corrected_of": [
+      "lem:poly-sigmoid",
+      "eq:affine-correction"
+    ],
+    "LowLogitRank.Approximation.poly_sigmoid_of": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Approximation.sigmoid_approx_of": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Approximation.softclip_poly_of": [
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Approximation.strip_approx": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Assembly.comparison_distribution": [
+      "sec:fixed-rank",
+      "eq:smoothing-tv",
+      "eq:softclip",
+      "lem:softclip-poly",
+      "lem:logit-lift",
+      "eq:smoothed-polynomial-tv"
+    ],
+    "LowLogitRank.Assembly.comparison_logitClass": [
+      "lem:softclip-poly",
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.Assembly.fixed_rank_comparison": [
+      "thm:fixed",
+      "eq:smooth-parameters",
+      "lem:explicit-gls-token-envelope",
+      "eq:smooth-budget"
+    ],
+    "LowLogitRank.Assembly.fixed_rank_comparison_envelope": [
+      "thm:fixed",
+      "lem:explicit-gls-token-envelope",
+      "eq:smooth-budget",
+      "eq:gls-polynomial-envelope"
+    ],
+    "LowLogitRank.Assembly.fixed_second_proof": [
+      "thm:fixed",
+      "sec:probability-route",
+      "alg:probability-route",
+      "eq:fixed-parameters",
+      "thm:lm",
+      "eq:surrogate",
+      "lem:poly-sigmoid",
+      "lem:lift",
+      "lem:coupling",
+      "eq:combined-budget"
+    ],
+    "LowLogitRank.Assembly.poly_sigmoid": [
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Assembly.softclip_poly": [
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Assembly.surrogate": [
+      "lem:poly-sigmoid",
+      "eq:surrogate",
+      "lem:lift"
+    ],
+    "LowLogitRank.Cauchy.cauchy_kernel": [
+      "prop:cauchy"
+    ],
+    "LowLogitRank.Cauchy.probRank_cauchyModel": [
+      "prop:cauchy"
+    ],
+    "LowLogitRank.Cauchy.prop_cauchy": [
+      "prop:cauchy"
+    ],
+    "LowLogitRank.Chebyshev.abs_eval_chebPartial_sub_le": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Chebyshev.chebyshevApprox": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Chebyshev.coeff_neg": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Chebyshev.hasSum_chebCoeff_T": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Chebyshev.hasSum_coeff_exp": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Chebyshev.norm_chebCoeff_le": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Chebyshev.norm_coeff_le": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Coupling.abs_sub_le_tv": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.exists_abs_sub_eq_tv": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.fullSupport_condOfDist": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.seqLaw_successive_bitQuery": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.suffixCharge": [
+      "eq:suffix-charge"
+    ],
+    "LowLogitRank.Coupling.suffixReply_isProbVec": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.transfer": [
+      "thm:fixed",
+      "sec:probability-route",
+      "thm:lm",
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_bitQuery_le": [
+      "lem:coupling",
+      "sec:hardness"
+    ],
+    "LowLogitRank.Coupling.tv_comm": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.tv_condProb_le_mul": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_condProb_le_sum": [
+      "eq:target-telescope"
+    ],
+    "LowLogitRank.Coupling.tv_isGreatest": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.tv_isGreatest_of_isProbVec": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.tv_jointLaw_le": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_jointLaw_le_mul": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_le_coupling": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.tv_le_of_condOfDist": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_le_one": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.tv_nonneg": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.tv_push_jointLaw_le_mul": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_push_le": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_seqLaw_le": [
+      "lem:coupling",
+      "eq:target-telescope"
+    ],
+    "LowLogitRank.Coupling.tv_seqLaw_le_mul": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_seqProb_le": [
+      "eq:target-telescope"
+    ],
+    "LowLogitRank.Coupling.tv_suffixQuery_le": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_suffixReply_le": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_suffixReply_le_sub": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_triangle": [
+      "sec:model",
+      "lem:coupling",
+      "eq:target-telescope",
+      "thm:fixed"
+    ],
+    "LowLogitRank.Coupling.tv_wordDist_le_mul": [
+      "lem:coupling"
+    ],
+    "LowLogitRank.Coupling.tv_wordDist_le_sum": [
+      "eq:target-telescope"
+    ],
+    "LowLogitRank.Coupling.tv_wordDist_le_sum_abs": [
+      "eq:target-telescope"
+    ],
+    "LowLogitRank.Coupling.two_mul_suffixCharge": [
+      "eq:suffix-charge"
+    ],
+    "LowLogitRank.Coupling.two_mul_suffixCharge_zero": [
+      "eq:suffix-charge"
+    ],
+    "LowLogitRank.Coupling.wordDist_condOfDist": [
+      "sec:model"
+    ],
+    "LowLogitRank.Coupling.wordDist_pos": [
+      "sec:model"
+    ],
+    "LowLogitRank.Cover.abs_clip_sub_le": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.approxSigma_error": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.bestKL": [
+      "eq:bestKL"
+    ],
+    "LowLogitRank.Cover.card_candidates_le": [
+      "thm:cover",
+      "eq:coverN"
+    ],
+    "LowLogitRank.Cover.card_gridParams_le": [
+      "eq:coverN"
+    ],
+    "LowLogitRank.Cover.coverSamples_spec": [
+      "eq:samples"
+    ],
+    "LowLogitRank.Cover.cover_sample_bound": [
+      "thm:cover"
+    ],
+    "LowLogitRank.Cover.dyadic_error": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.exists_grid_candidate": [
+      "sec:sample-upper",
+      "eq:canonical",
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.exp_sub_expTaylor_le": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.frac_lipschitz": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.hasDerivAt_phi": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.inv_lipschitz": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.kl_le_of_abs_log_ratio_le": [
+      "eq:bestKL"
+    ],
+    "LowLogitRank.Cover.likelihood_selection": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.likelihood_selection_delta": [
+      "eq:samples"
+    ],
+    "LowLogitRank.Cover.likelihood_selection_exp": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.log_change": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.log_div_le_coverK": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.log_wordDist_ratio_le": [
+      "eq:bestKL"
+    ],
+    "LowLogitRank.Cover.logit_error": [
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.markov_sqrt": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.mesh_bound": [
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.mesh_budget": [
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.mesh_le": [
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.mesh_step": [
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.neg_log_bern_sigmoid": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.phi_lipschitz": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.precB_spec": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.rounded_logit_error": [
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.sample_tokens": [
+      "thm:cover"
+    ],
+    "LowLogitRank.Cover.sigmoid_two_mul_ge": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.sqrt_one_sub_sq_le": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.state_error": [
+      "eq:mesh"
+    ],
+    "LowLogitRank.Cover.step_logloss": [
+      "eq:bestKL"
+    ],
+    "LowLogitRank.Cover.taylor_chain_one": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.taylor_chain_three": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.taylor_chain_two": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.taylor_remainder": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Cover.tv_sq_le": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.Crossover.A_mul_pow_le": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.A_tenfold": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.A_tenfold_lt": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.B_tenfold": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.DOf_le": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.JOf_le": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.LOf_bound": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.LOf_le": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.VOf_le": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.W_le_A_mul_pow": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.W_le_tenfold": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.crossover": [
+      "sec:crossover",
+      "eq:gls-polynomial-envelope",
+      "lem:gls-root-simulation"
+    ],
+    "LowLogitRank.Crossover.crossover_envelope": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.crossover_root": [
+      "sec:crossover",
+      "lem:gls-root-simulation",
+      "prop:scalar",
+      "alg:fixed"
+    ],
+    "LowLogitRank.Crossover.crossover_tenfold": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.envInput_V": [
+      "eq:gls-polynomial-envelope"
+    ],
+    "LowLogitRank.Crossover.envelope_tokens_le": [
+      "eq:gls-polynomial-envelope"
+    ],
+    "LowLogitRank.Crossover.exp_div_pow_208_mono": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.logCeil_hundredth": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.log_le_sqrt": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.pExp_one": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.six_fifths_le": [
+      "sec:crossover"
+    ],
+    "LowLogitRank.Crossover.teacher0_inClass_of_one_le": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Crossover.tenfold2048": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.tenfold2048_envelope": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Crossover.tenfold2048_root": [
+      "cor:tenfold2048",
+      "lem:gls-root-simulation"
+    ],
+    "LowLogitRank.Crossover.tenfold_numeric": [
+      "cor:tenfold2048"
+    ],
+    "LowLogitRank.Envelope.Input.Hstar_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.Jb_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.K_ge_log": [
+      "eq:explicit-gls-parameters"
+    ],
+    "LowLogitRank.Envelope.Input.K_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.Mest_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.Mest_log_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.Q_le": [
+      "eq:explicit-gls-request-caps"
+    ],
+    "LowLogitRank.Envelope.Input.Rl_add_Rs_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.T_le_K": [
+      "eq:global-future-dimension"
+    ],
+    "LowLogitRank.Envelope.Input.Td_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.V_gt": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.V_sq_mul_g": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.W_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.alpha_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.bTau_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.bitCost_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.ceil_logb_sixteen_div_xi": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.Input.deltaS_inv_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.eta_T_sq_n": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.Input.eta_inv_eq": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.eta_inv_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.explicit_gls_token_envelope": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.four_T_div_eps_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.g_inv_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.gamma_gt": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.gamma_inv_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.grid_half_step": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.Input.logV_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.nArg_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.n_ge_log": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.Input.n_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.nlog_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.one_sub_g_pow_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.Input.requests_le_Q": [
+      "eq:explicit-gls-request-caps"
+    ],
+    "LowLogitRank.Envelope.Input.six_K_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.spannerN_le_Hstar": [
+      "eq:explicit-gls-parameters"
+    ],
+    "LowLogitRank.Envelope.Input.spanner_requests_global": [
+      "sec:explicit-gls-procedure"
+    ],
+    "LowLogitRank.Envelope.Input.tokens_le_W": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.valid_example": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.validation_ledger": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.Input.witness_count_lt": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.witnesses_total_lt": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.wrapper_error_budget": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.Input.xi_inv_bounds": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Envelope.Input.xi_isGreatest_pow_two": [
+      "eq:explicit-gls-parameters"
+    ],
+    "LowLogitRank.Envelope.Input.xi_tolerance": [
+      "eq:explicit-gls-tolerance"
+    ],
+    "LowLogitRank.Envelope.card_extendFutures_le_dbar": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.card_extendFutures_le_witnesses": [
+      "sec:explicit-gls-procedure"
+    ],
+    "LowLogitRank.Envelope.global_future_dimension": [
+      "eq:global-future-dimension"
+    ],
+    "LowLogitRank.Envelope.hoeffding_exponent": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.hoeffding_step": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.spanner_requests_le": [
+      "eq:global-future-dimension"
+    ],
+    "LowLogitRank.Envelope.sum_epochs_le": [
+      "eq:global-future-dimension"
+    ],
+    "LowLogitRank.Envelope.sum_epochs_range_le": [
+      "eq:global-future-dimension"
+    ],
+    "LowLogitRank.Envelope.sum_next_token_errors": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Envelope.sum_sq_futures_le": [
+      "sec:explicit-gls-procedure"
+    ],
+    "LowLogitRank.Envelope.two_mul_card_validationPairs": [
+      "sec:explicit-gls-procedure"
+    ],
+    "LowLogitRank.Floor.abs_answer_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Floor.abs_centered_logit_le_lambdaOf": [
+      "sec:floor"
+    ],
+    "LowLogitRank.Floor.abs_clipped_logit_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Floor.chernoff_exponent_le": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.chernoff_exponent_le_of_ceil": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.exists_two_zpow_mul": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.floor_error_total": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.floor_estimator_good_event": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.half_log_lt_LOf": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Floor.half_log_two_div_lt_floorL": [
+      "sec:gls-validation-arithmetic",
+      "sec:floor"
+    ],
+    "LowLogitRank.Floor.hasSum_log_of_mem_Ico": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.hasSum_log_two": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.hoeffding_exponent_eq": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Floor.lambdaOf_le_floorL": [
+      "sec:floor"
+    ],
+    "LowLogitRank.Floor.log_series_error_le": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.majority_exponent_le": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Floor.majority_union_bound": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Floor.odd_series_tail_le": [
+      "lem:floor-estimator"
+    ],
+    "LowLogitRank.Floor.sqrt_le_alpha": [
+      "sec:floor",
+      "lem:bounded-factors"
+    ],
+    "LowLogitRank.Floor.wrapper_error_total": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Hardness.Program.response_mem": [
+      "sec:hardness"
+    ],
+    "LowLogitRank.Hardness.QueryTree.acceptsAll_prob_le": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.QueryTree.card_accept_le_half": [
+      "thm:reduction"
+    ],
+    "LowLogitRank.Hardness.QueryTree.card_acceptsAll_le": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.auditProgram_consistent": [
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.average_ge": [
+      "thm:reduction"
+    ],
+    "LowLogitRank.Hardness.consistent_self": [
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.counter_update": [
+      "eq:counter"
+    ],
+    "LowLogitRank.Hardness.dict_consistent": [
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.half_pow_blockCount_le": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.hardAdvantage_ge": [
+      "eq:hard-advantage"
+    ],
+    "LowLogitRank.Hardness.hardT_params": [
+      "thm:hardness"
+    ],
+    "LowLogitRank.Hardness.hardTeacher_abs_logit_lt": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.hardTeacher_eventMass": [
+      "eq:hard-parameters"
+    ],
+    "LowLogitRank.Hardness.hardTeacher_inClass": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.hardTeacher_odds": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.hardTeacher_rank_ge": [
+      "lem:hard-teacher",
+      "eq:hard-parameters"
+    ],
+    "LowLogitRank.Hardness.hardTeacher_rational": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.hardTeacher_rational_bits": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.le_two_pow_indexBits": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.mismatch_increment": [
+      "eq:counter"
+    ],
+    "LowLogitRank.Hardness.multiLogit_rank_le": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.multiStep_label": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.multiTeacher_inClass": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.multiTeacher_inClass_hard": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.reduction_accounting": [
+      "thm:reduction",
+      "lem:coupling",
+      "eq:hard-advantage"
+    ],
+    "LowLogitRank.Hardness.reduction_advantage": [
+      "thm:reduction",
+      "eq:hard-advantage"
+    ],
+    "LowLogitRank.Hardness.reduction_real_case": [
+      "thm:reduction",
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.reset_mkState": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.simulator_close": [
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.simulator_close_hard": [
+      "eq:hard-parameters"
+    ],
+    "LowLogitRank.Hardness.student_event_ge": [
+      "thm:reduction"
+    ],
+    "LowLogitRank.Hardness.teacherLogit_rank_le": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.teacher_eventMass": [
+      "thm:reduction",
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.teacher_label_consistent": [
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.teacher_logitClass": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.teacher_rank_ge": [
+      "lem:hard-teacher"
+    ],
+    "LowLogitRank.Hardness.tv_hardTeacher_ideal": [
+      "thm:reduction",
+      "eq:hard-parameters"
+    ],
+    "LowLogitRank.Hardness.tv_teacher_ideal": [
+      "thm:reduction",
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.tv_transcript_simulator_le": [
+      "lem:coupling",
+      "eq:hard-consistency"
+    ],
+    "LowLogitRank.Hardness.weakAdvantage_ge": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.Hardness.weak_reduction_accounting": [
+      "cor:allTV"
+    ],
+    "LowLogitRank.MaxVolume.abs_coeff_le_one": [
+      "eq:canonical"
+    ],
+    "LowLogitRank.MaxVolume.bounded_factors": [
+      "lem:bounded-factors"
+    ],
+    "LowLogitRank.MaxVolume.bounded_factors_of_pos": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.MaxVolume.coord_factors": [
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.MaxVolume.exists_canonical": [
+      "eq:canonical",
+      "sec:sample-upper",
+      "thm:alphabet"
+    ],
+    "LowLogitRank.MaxVolume.exists_canonical_alphabet": [
+      "thm:alphabet"
+    ],
+    "LowLogitRank.MaxVolume.exists_canonical_binary": [
+      "eq:canonical",
+      "sec:sample-upper"
+    ],
+    "LowLogitRank.MaxVolume.exists_canonical_of_logitClass": [
+      "eq:canonical"
+    ],
+    "LowLogitRank.MaxVolume.exists_maxVolume_basis": [
+      "eq:canonical",
+      "lem:bounded-factors"
+    ],
+    "LowLogitRank.MaxVolume.maxVolume_spec": [
+      "eq:canonical"
+    ],
+    "LowLogitRank.MaxVolume.vol_update_sum": [
+      "eq:canonical"
+    ],
+    "LowLogitRank.Params.Cq_logb_VOf_add_one_lt": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.DOf_le": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.DOf_le_two_pow": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.abs_le_LOf": [
+      "thm:fixed",
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.Params.abs_le_rpow_of_pad": [
+      "cor:power-logits"
+    ],
+    "LowLogitRank.Params.abs_le_softclipBound_add": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.Params.abs_ofLogit_sub_smooth_le": [
+      "eq:smoothed-polynomial-tv",
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Params.abs_sigmoid_sub_softclip_le": [
+      "eq:smoothed-polynomial-tv"
+    ],
+    "LowLogitRank.Params.abs_sigmoid_two_mul_sub_le": [
+      "eq:smoothed-polynomial-tv"
+    ],
+    "LowLogitRank.Params.abs_smooth_sub_le": [
+      "sec:fixed-rank",
+      "eq:smoothing-tv"
+    ],
+    "LowLogitRank.Params.abs_softclip_le": [
+      "eq:softclip"
+    ],
+    "LowLogitRank.Params.chebyshev_tail_eq": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Params.ellipse_half_width_lt": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Params.envelope_hyps_satisfiable": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Params.failure_ledger": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.le_rpow_of_pad": [
+      "cor:power-logits"
+    ],
+    "LowLogitRank.Params.log_le_JOf_le_NOf": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.log_rho_ge": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Params.logb_DOf_le": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.logb_VOf_le": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.logb_sum_le_JOf": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.logit_smooth": [
+      "eq:softclip"
+    ],
+    "LowLogitRank.Params.oracle_transfer": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.prR_le": [
+      "sec:probability-route"
+    ],
+    "LowLogitRank.Params.pr_combined_budget": [
+      "eq:combined-budget"
+    ],
+    "LowLogitRank.Params.pr_degree": [
+      "sec:probability-route",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Params.pr_final": [
+      "sec:probability-route",
+      "thm:fixed",
+      "eq:fixed-parameters"
+    ],
+    "LowLogitRank.Params.pr_ledger": [
+      "sec:probability-route"
+    ],
+    "LowLogitRank.Params.pr_logb_R_le": [
+      "sec:probability-route"
+    ],
+    "LowLogitRank.Params.pr_logb_sum_le": [
+      "sec:probability-route"
+    ],
+    "LowLogitRank.Params.prob_floor_of_abs_logit_le": [
+      "cor:power-logits"
+    ],
+    "LowLogitRank.Params.sigmoid_floor_of_abs_le": [
+      "cor:power-logits"
+    ],
+    "LowLogitRank.Params.sigmoid_two_mul_softclip": [
+      "eq:softclip"
+    ],
+    "LowLogitRank.Params.sigmoid_two_mul_softclip_logit": [
+      "eq:smoothed-polynomial-tv"
+    ],
+    "LowLogitRank.Params.smooth_bounds": [
+      "sec:fixed-rank"
+    ],
+    "LowLogitRank.Params.smooth_budget": [
+      "eq:smooth-budget",
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Params.smooth_budget_of_V11": [
+      "eq:smooth-budget"
+    ],
+    "LowLogitRank.Params.smooth_budget_of_envelope": [
+      "eq:smooth-budget",
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Params.smooth_fullSupport": [
+      "sec:fixed-rank"
+    ],
+    "LowLogitRank.Params.smooth_mem_Icc": [
+      "sec:fixed-rank"
+    ],
+    "LowLogitRank.Params.softclipBound_add_two_lt_LOf": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Params.softclip_degree_le_kOf": [
+      "thm:fixed",
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.Params.tauOf_bounds": [
+      "sec:fixed-rank",
+      "eq:smoothing-tv"
+    ],
+    "LowLogitRank.Params.trunc_le_of_degree": [
+      "lem:softclip-poly",
+      "lem:poly-sigmoid"
+    ],
+    "LowLogitRank.Params.tv_chain": [
+      "thm:fixed",
+      "eq:smoothing-tv",
+      "eq:smoothed-polynomial-tv",
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Params.tv_ledger": [
+      "thm:fixed"
+    ],
+    "LowLogitRank.Parity.condProb_parityModel": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Parity.hoeffding_majorityReps_le": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Parity.logit_parityModel": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Parity.parityModel_inClass": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Parity.parityModel_mem": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Parity.parityModel_rank_le": [
+      "sec:parity"
+    ],
+    "LowLogitRank.Parity.query_basisVec": [
+      "sec:parity"
+    ],
+    "LowLogitRank.PolyRank.abs_softclip_le": [
+      "sec:fixed-rank"
+    ],
+    "LowLogitRank.PolyRank.card_monomials": [
+      "lem:logit-lift",
+      "lem:lift"
+    ],
+    "LowLogitRank.PolyRank.lift_fullSupport": [
+      "eq:surrogate"
+    ],
+    "LowLogitRank.PolyRank.logitLift_inClass": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.PolyRank.logitLift_inClass_hyp_satisfiable": [
+      "lem:softclip-poly"
+    ],
+    "LowLogitRank.PolyRank.logitLift_logitClass": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.PolyRank.logitLift_logitClass_of_approx": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.PolyRank.probRank_lift_le": [
+      "lem:lift",
+      "eq:surrogate"
+    ],
+    "LowLogitRank.PolyRank.probRank_polynomial_le": [
+      "lem:lift"
+    ],
+    "LowLogitRank.PolyRank.rank_logitCutMatrix_le_of_linearState": [
+      "lem:hard-teacher",
+      "cor:allTV"
+    ],
+    "LowLogitRank.PolyRank.rank_logitCutMatrix_logitLift_le": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.PolyRank.rank_logitCutMatrix_polynomial_le": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.PolyRank.rank_map_polynomial_le": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.PolyRank.rank_map_polynomial_le_of_rank_le": [
+      "lem:logit-lift"
+    ],
+    "LowLogitRank.PolyRank.rank_probCutMatrix_polynomial_le": [
+      "lem:lift"
+    ],
+    "LowLogitRank.Projection.abs_log_div_add_one_le": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.abs_objectiveDeriv_single_le": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.abs_sub_le_of_partial_le": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.abs_sub_le_sqrt": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.approx_projection": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.approx_projection_compact": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.approx_projection_tau": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.binarySearch_stop": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.branchProb_ge": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.card_cumulative_select": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.centralCut": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.composed_coeff_le": [
+      "lem:rational-spanner"
+    ],
+    "LowLogitRank.Projection.cumulative_rounding": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.cutoff_le_floor": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.cutoff_le_of_floor": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.cutoff_pow_le_two_sqrt": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.cutoff_rpow_tenth": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.dyadicLaw_eq_dyadic": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.dyadicLaw_sum": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.feasible_singleton": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.innerBall": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.le_dyadicLaw": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.log_inv_cutoff_pow": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.log_inv_floor_le": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.mesh_bound": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.objective_rounding": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.relEnt_sub_le_max": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.retained_le": [
+      "lem:rational-spanner"
+    ],
+    "LowLogitRank.Projection.rounding_optimal": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.smoothed_coeff_le": [
+      "lem:rational-spanner"
+    ],
+    "LowLogitRank.Projection.spanner_const_five": [
+      "lem:rational-spanner"
+    ],
+    "LowLogitRank.Projection.spanner_half_gamma": [
+      "lem:rational-spanner"
+    ],
+    "LowLogitRank.Projection.spanner_l1_bound": [
+      "lem:rational-spanner"
+    ],
+    "LowLogitRank.Projection.sqrt_div_le_of_tolerance": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.stored_bounds": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Projection.strongConvexity": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.threePoint": [
+      "lem:approx-projection"
+    ],
+    "LowLogitRank.Projection.tv_dyadicLaw_le": [
+      "sec:finite-bit-lm"
+    ],
+    "LowLogitRank.Scalar.CappedAlgo.expect_emptyCount_ge": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.CappedAlgo.expect_emptyCount_gt": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.CappedAlgo.klDiv_law": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.CappedAlgo.klDiv_law_teachers": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.abs_sgn_mul_sub": [
+      "lem:gls-root-simulation"
+    ],
+    "LowLogitRank.Scalar.binKL_le_klDiv": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.binKL_p0_p1": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.binKL_p0_p1_le": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.deriv_deriv_logPartition_le": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.gls_root_simulation": [
+      "lem:gls-root-simulation",
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.p1_le_e_mul_p0": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.p1_le_exp_mul_p0": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.pinsker": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.prop_scalar": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.prop_scalar_attained": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.scalar_constant": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.teacher0_inClass": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.teacher1_inClass": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.tv_teacher0_le": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Scalar.tv_teacher1_le": [
+      "prop:scalar"
+    ],
+    "LowLogitRank.Spanner.Ns_bound": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.adapted_hoeffding": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.ceil_validation_ge": [
+      "eq:explicit-gls-parameters"
+    ],
+    "LowLogitRank.Spanner.compression_spanner": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.compression_spanner_exists": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.compression_union_bound": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.compression_union_bound_exp": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.exists_bary_spanner": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.expMoment_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.expMoment_root_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.expect_le_add_prob": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.gls_feasibility": [
+      "lem:gls-feasibility",
+      "eq:our-gls-lp"
+    ],
+    "LowLogitRank.Spanner.lpFeasible_of_reps": [
+      "lem:gls-feasibility",
+      "eq:our-gls-lp"
+    ],
+    "LowLogitRank.Spanner.miss_prob_chain": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.miss_prob_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.miss_prob_le_explicit": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.prob_gt_of_expect_gt": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Spanner.selection_fail_le": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.selection_success_ge": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.sum_choose_le": [
+      "lem:compression-spanner"
+    ],
+    "LowLogitRank.Spanner.wprob_biUnion_le": [
+      "lem:gls-feasibility"
+    ],
+    "LowLogitRank.Spanner.wprob_biUnion_le_card_mul": [
+      "lem:gls-feasibility"
+    ],
+    "LowLogitRank.Witness.BR_div_e0": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.WitnessData.inner_gt": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.WitnessData.leverage_gt": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.WitnessData.lt_logb": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.WitnessData.quad_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.abs_sigmoid_two_mul_sub_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.combo_bounds": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.det_gram_succ": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.det_le_trace_div_pow": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.det_upper_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.dotProduct_sq_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.leverage_ratio_eq": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.logb_a0_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.logb_bound_le_nine": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.logb_det_ratio_eq_sum": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.logb_det_ratio_le": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.logb_sum_le_Jb": [
+      "lem:explicit-gls-token-envelope",
+      "eq:explicit-gls-parameters"
+    ],
+    "LowLogitRank.Witness.lt_of_leverage_gt_one": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.next_token_telescope": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.one_lt_leverage_bound": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.residual_le": [
+      "lem:explicit-gls-token-envelope",
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.sqrt_le_alpha": [
+      "lem:bounded-factors"
+    ],
+    "LowLogitRank.Witness.telescope": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.total_lt": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.tv_next_token_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.tv_softmax_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.tv_softmax_le_of_abs_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.two_beta_n_le": [
+      "sec:gls-validation-arithmetic"
+    ],
+    "LowLogitRank.Witness.witness_count_lt": [
+      "lem:explicit-gls-token-envelope",
+      "eq:explicit-gls-parameters",
+      "lem:bounded-factors"
+    ],
+    "LowLogitRank.Witness.witness_count_lt_general": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.witness_count_lt_of_bounds": [
+      "lem:explicit-gls-token-envelope",
+      "eq:explicit-gls-parameters"
+    ],
+    "LowLogitRank.Witness.witness_count_lt_satisfiable": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.witness_general": [
+      "lem:explicit-gls-token-envelope"
+    ],
+    "LowLogitRank.Witness.xi_le": [
+      "eq:explicit-gls-parameters"
+    ]
+  }
+}

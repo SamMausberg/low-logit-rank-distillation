@@ -1,0 +1,85 @@
+name: Research checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Lint and finite audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m ruff check .
+      - run: python -m ruff format --check .
+      - run: cffconvert --validate
+      - name: Reproduce the finite structural audit
+        run: make checks PYTHON=python
+
+  lean:
+    name: Lean build and axiom audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: leanprover/lean-action@50fcf42d2e460296f1a34b402e990d1b24f8b596 # v1
+        with:
+          lake-package-directory: formalization
+          auto-config: "false"
+          build: "false"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "false"
+      - name: Fetch the Mathlib build cache
+        working-directory: formalization
+        env:
+          MATHLIB_NO_CACHE_ON_UPDATE: "1"
+        run: lake exe cache get
+      - name: Build and audit axioms
+        working-directory: formalization
+        run: python3 verify.py
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: lean-verification
+          path: formalization/lean-verification.json
+          retention-days: 14
+
+  paper:
+    name: Manuscript build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-latex-recommended texlive-latex-extra texlive-pictures texlive-fonts-recommended lmodern
+      - name: Build the paper
+        run: ./paper/build.sh
+      - name: Check the build log
+        run: |
+          ! grep -E "Overfull|undefined|Rerun to get" paper/build.log
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: paper
+          path: |
+            paper/low_logit_rank_distillation.pdf
+            paper/build.log
+          retention-days: 14

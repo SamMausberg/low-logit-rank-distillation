@@ -1,0 +1,10 @@
+formalization/.lake/
+paper/*.aux
+paper/*.log
+paper/*.out
+__pycache__/
+paper/build.log
+.ruff_cache/
+.venv/
+work/
+*.pyc
