@@ -418,7 +418,7 @@ We now prove Theorem~\ref{thm:hardness}. The construction in Figure~\ref{fig:tea
 
 A \emph{strong Boolean pseudorandom function} is a family $F_k:\{0,1\}^n\to\{0,1\}$ with efficiently sampled keys, such that uniform probabilistic polynomial-time algorithms with adaptive membership queries have negligible distinguishing advantage between a random $F_k$ and a uniformly random Boolean function. A function of $n$ is negligible if it is smaller than every inverse polynomial for sufficiently large $n$. We assume that each fixed-key function has a bounded-fan-in circuit of depth $O(\log n)$ and polynomial size, with bounds independent of the key. This circuit class is denoted by $\mathsf{NC}^1$.
 
-The finite-field decisional Diffie--Hellman assumption used by \citet{nr} supplies this primitive, as Appendix~\ref{sec:nr-details} explains.
+The finite-field decisional Diffie--Hellman assumption used by \citet{nr} supplies this primitive, as Appendix~\ref{sec:nr-details} explains. \citet{djk} obtain pseudorandom functions computable in $\NC$ from LWE with a polynomial modulus-to-noise ratio, from standard LPN with inverse-polynomial noise, and from computational Diffie--Hellman. Their security definition allows adaptive queries by polynomial-size circuits, so these functions also meet the uniform requirement above, and one output bit gives a Boolean family.
 
 \citet{barrington} converts a depth-$O(\log n)$ circuit into a polynomial-length width-five permutation branching program. Each instruction reads one input coordinate and applies one of two permutations of five states. Its strong form gives identity on one function value and a fixed five-cycle on the other. Hence an initial coordinate vector $v_0$, with one entry equal to one and the others zero, and a sign vector $r\in\{-1,1\}^5$ can read out $2F_k(x)-1$ from the final state. We call such a coordinate vector one-hot. Every sequence of independently chosen instruction bits still produces a one-hot state, even when repetitions are inconsistent.
 
@@ -666,6 +666,12 @@ Stanislav Budzinskiy.
 \newblock \emph{SIAM Journal on Mathematics of Data Science}, 7(3):1098--1122, 2025.
 \newblock \url{https://doi.org/10.1137/24M1687133}.
 \newblock Author version: \url{https://arxiv.org/abs/2407.03250v4}.
+
+\bibitem[Ding et~al.(2026)Ding, Jain, and Komargodski]{djk}
+Youlong Ding, Aayush Jain, and Ilan Komargodski.
+\newblock Pseudorandom functions in $\mathsf{NC}^1$ from LWE/LPN/CDH (or: how to build PRFs in $\mathsf{NC}^1$, generically).
+\newblock arXiv:2608.25213v1, 2026.
+\newblock \url{https://arxiv.org/abs/2608.25213v1}.
 
 \bibitem[Floyd and Warmuth(1995)]{floyd-warmuth}
 Sally Floyd and Manfred Warmuth.

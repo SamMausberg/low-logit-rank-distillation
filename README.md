@@ -37,7 +37,7 @@ may submit any prefix and receive one sampled next bit.
 ## Verification
 
 - [x] The manuscript builds with no overfull boxes, undefined references or citations.
-- [x] All 15 bibliography entries and every pinpoint reference (theorem, lemma, section and page
+- [x] All 16 bibliography entries and every pinpoint reference (theorem, lemma, section and page
   numbers, and the two quotations from Golowich, Liu and Shetty) were checked against the
   primary sources.
 - [x] The finite audit reproduces its recorded output byte for byte.
